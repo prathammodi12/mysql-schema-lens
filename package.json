@@ -1,0 +1,55 @@
+{
+  "name": "mysql-schema-lens",
+  "version": "0.1.0",
+  "description": "Local MySQL schema store for coding agents: cached, fingerprint-checked, served over MCP or a CLI.",
+  "keywords": [
+    "mysql",
+    "schema",
+    "information_schema",
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "cli",
+    "ai-agents",
+    "database"
+  ],
+  "author": "Pratham Modi",
+  "license": "MIT",
+  "homepage": "https://github.com/prathammodi12/mysql-schema-lens#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prathammodi12/mysql-schema-lens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prathammodi12/mysql-schema-lens/issues"
+  },
+  "type": "module",
+  "bin": {
+    "mysql-schema-lens": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "dbctx.config.json.example"
+  ],
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "mysql2": "3.24.5",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "default": "myapp-dev",
+  "ttlSeconds": 5,
+  "defaultFormat": "compact",
+  "inferAliases": { "dept": "department" },
+  "profiles": {
+    "myapp-dev": {
+      "host": "localhost",
+      "port": 3306,
+      "user": "schema_reader",
+      "database": "myapp",
+      "passwordEnv": "DBCTX_MYSQL_PASSWORD",
+      "comment": "Local dev database; the password is read from DBCTX_MYSQL_PASSWORD"
+    }
+  }
+}

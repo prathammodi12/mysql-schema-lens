@@ -1,0 +1,6 @@
+node_modules/
+dist/
+# real configs carry hosts and users; keep only the example in git
+dbctx.config.json
+*.log
+*.tgz
