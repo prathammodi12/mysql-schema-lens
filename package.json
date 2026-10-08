@@ -1,6 +1,6 @@
 {
   "name": "mysql-schema-lens",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Local MySQL schema store for coding agents: cached, fingerprint-checked, served over MCP or a CLI.",
   "keywords": [
     "mysql",
